@@ -31,7 +31,7 @@ System.out.println("Enter integers to create nodes (enter a non-integer to exit)
 int data = scanner.nextInt();
 list.addNode(data);
         }
-System.out.println("Linked List created");
+System.out.print("Linked List created");
 System.out.println("Linked List");
 list.displayList();
 System.out.println("Length of the Linked List is:"+list.length());
@@ -39,7 +39,14 @@ scanner.close();
     }
 int length() 
     {
-  //Type your code here
+        int count=0;
+        Node current=head;
+        while(current!=null)
+        {
+            count++;
+            current=current.next;
+        }
+        return count;
     }
 public void displayList() {
        Node current = head;
